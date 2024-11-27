@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Marivan</title>
+    <link rel="stylesheet" href="marivan.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Marivan</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Marivan</a></li>
+                <li><a href="#culture">Culture</a></li>
+                <li><a href="#attractions">Attractions</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h2>About Marivan</h2>
+            <p>Marivan is a beautiful city located in the west of Iran, known for its stunning landscapes and rich culture. The city is surrounded by mountains and is famous for its lakes and natural beauty.</p>
+            <img src="https://th.bing.com/th/id/OIP.hK6rswyO6Mwk_21DpwV5MgHaHa?w=172&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" alt="marivan city">
+        </section>
+        <section id="culture">
+            <h2>Culture</h2>
+            <p>The people of Marivan primarily speak Kurdish, and the city is known for its vibrant traditions, music, and dance. Kurdish culture is rich in history and is celebrated through various festivals and events.</p>
+        </section>
+        <section id="attractions">
+            <h2>Attractions</h2>
+                <li>Lake Zarivar</li>
+                <li>Marivan Bazaar</li>
+                <li>Historical Sites</li>
+                <li>Beautiful Mountain Trails</li>
+            </ul>
+            <img src="https://www.bing.com/th/id/OGC.dc547c04ea016e97d86bb5192376ed5c?pid=1.7&rurl=https%3a%2f%2fhipersia.com%2fen%2fmi_ax%2fOriginal%2f1397%2f11%2f2149.gif&ehk=ZMGzBuHsYxkF%2fXUI8KSVH47i70jdIuX%2byTbvSLO0t0w%3d" alt="Lake Zarivar" class="town-image">
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit" >Send Message</button>
+            </form>
+            <div id="response" style="margin-top: 20px;"></div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2023 Your Name - Marivan, Iran</p>
+    </footer>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const message = document.getElementById('message').value;
+            const responseDiv = document.getElementById('response');
+            responseDiv.innerHTML = `<h3>Thank you, ${name}! Your message has been received.</h3>`;
+            document.getElementById('contact-form').reset(); // Reset the form
+        });
+    </script>
+</body>
+</html>
